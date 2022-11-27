@@ -1,0 +1,37 @@
+.btn-white {
+  background-color: $white;
+  border-color: $white;
+  box-shadow: $custom-box-shadow;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+
+  .btn-inner--text,
+  .btn-inner--icon {
+    color: $gray-900 !important;
+    font-weight: 600;
+  }
+
+  .btn-upgrade--text,
+  .btn-upgrade--icon {
+    color: $white;
+    font-weight: 600;
+  }
+}
+
+.btn-color--success {
+  background-color: $success !important;
+  border-color: $success !important;
+}
+
+.btn-color--warning {
+  background-color: $warning !important;
+  border-color: $warning !important;
+}
+
+.plan-name {
+  position: absolute;
+  right: 15px;
+  bottom: -20px;
+}

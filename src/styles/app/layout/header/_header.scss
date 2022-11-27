@@ -1,0 +1,339 @@
+.header-container {
+  background-color: $gray-900;
+
+  &.feature-cover {
+    min-height: 348px;
+
+    &.child-header {
+      @include media-breakpoint-down(sm) {
+        min-height: 328px;
+      }
+    }
+  
+    z-index: 4;
+    position: relative;
+  
+    &::after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $gray-900;
+      opacity: .8;
+    }
+
+    * {
+      z-index: 3;
+    }
+
+    &.spousal-header > img {
+      max-height: 348px;
+      object-fit: cover;
+
+      @include media-breakpoint-down(sm) {
+        max-height: 362px;
+      }
+
+      @media screen and (max-width: 363px) {
+        height: 400px;
+        max-height: 400px;
+      }
+    }
+
+    &.child-header > img {
+      max-height: 348px;
+      object-fit: cover;
+
+      @include media-breakpoint-down(sm) {
+        max-height: 323px;
+      }
+
+      @media screen and (max-width: 527px) {
+        max-height: 362px;
+      }
+
+      @media screen and (max-width: 363px) {
+        height: 463px;
+        max-height: 362px;
+      }
+    }
+
+    .header-transparent {
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      .nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .canada-icon {
+        margin-bottom: -3px;
+      }
+
+      .navbar-top {
+        border-bottom-color: #4b4c4c !important;
+      }
+    }
+
+    .header-account-page {
+      position: absolute;
+      top: 138px;
+      width: 100%;
+    }
+  }
+
+  & > .header-transparent {
+    position: initial;
+
+    .navbar-top {
+      z-index: 11;
+      z-index: 11;
+      padding: .75rem 1rem;
+
+      .navbar-nav {
+        flex-direction: row;
+      }
+    }
+
+    .navbar {
+      z-index: 10;
+    }
+  }
+
+  .navbar-text {
+    color: $white;
+    font-size: .875rem;
+  }
+
+  .placeholderImg {
+    width: 180px;
+    height: 50px;
+  }
+
+  .img-saturate {
+    height: 50px;
+  }
+
+  .nav-link {
+    color: $white !important;
+    font-size: .875rem;
+    font-weight: 600;
+  }
+
+  .user-dropdown, .doc-support-dropdown {
+
+    .user-dropdown-toggle, .dropdown-toggle {
+      background-color: transparent;
+      border: 0;
+
+      @include hover-focus-active {
+        box-shadow: none !important;
+        background-color: transparent;
+      }
+
+      &::after {
+        @media (max-width: 991.98px) {
+          float: initial;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      min-width: 200px;
+      outline: none;
+      transform: none !important;
+      top: 35px !important;
+      left: -56px !important;
+      opacity: 0;
+      display: none;
+      transition: opacity 0.1s ease-in-out;
+
+      &::before {
+        content: "";
+        background: #fff;
+        box-shadow: none;
+        display: block;
+        height: 16px;
+        width: 16px;
+        right: 50px;
+        position: absolute;
+        bottom: 100%;
+        z-index: -5;
+        transform: rotate(-45deg) translateY(1rem);
+        border-radius: .2rem;
+      }
+
+      &.show {
+        display: block;
+        opacity: 1;
+      }
+
+      @media (min-width: 992px) {
+        margin-left: -1.25rem;
+      }
+
+      @include media-breakpoint-down(md) {
+        left: -88px !important;
+      }
+
+      @include media-breakpoint-down(xs) {
+        left: -105px !important;
+      }
+
+      .dropdown-menu-links {
+        a {
+          color: $gray-900 !important;
+        }
+      }
+    }
+  }
+
+  .user-dropdown {
+    position: relative;
+
+    .dropdown-menu {
+      position: absolute;
+
+      @include media-breakpoint-down(xs) {
+        // transform: translate3d(-100px, 41px, 0px) !important;
+      }
+
+      .dropdown-item {
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .doc-support-dropdown {
+    .dropdown-toggle {
+      margin-right: 0;
+    }
+
+    .dropdown-menu {
+      outline: none;
+      width: 398px;
+      z-index: 10;
+
+      &.dropdown-menu-right {
+        right: 0 !important;
+        left: auto !important;
+
+        @media (max-width: 992px) {
+          right: -90px !important;
+        }
+      }
+
+      .custom-dropdown-item {
+        a {
+          color: $gray-900;
+          display: block;
+          padding: 1rem 1.5rem;
+          border-top: 1px solid $border-color;
+          border-bottom: 1px solid $border-color;
+
+          &:hover {
+            text-decoration: none;
+            background-color: $gray-100;
+          }
+
+          .link-content {
+            display: flex;
+
+            .link-img {
+              height: 50px;
+              width: 50px;
+            }
+
+            .description-container {
+              margin-left: 16px;
+
+              .item-title {
+                font-size: 16px;
+              }
+        
+              .description {
+                font-size: 15.5px;
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .dropdown-item {
+        outline: none;
+        font-size: 14px;
+        font-weight: 400;
+        color: $gray-700;
+        padding: .25rem 1rem;
+        
+        &:active {
+          background-color: $gray-100;
+        }
+      }
+
+      .item-title {
+        font-size: 16px;
+      }
+
+      .description {
+        font-size: 15.5px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .header-account-page {
+    @media (min-width: 768px) {
+      height: 210px;
+    }
+  
+    @media (max-width: 991.98px) {
+      padding-top: 0rem;
+    }
+  
+    .dropdown-toggle::after {
+      vertical-align: 0.12em;
+    }
+  
+    .btn-secondary {
+      background-color: $white;
+    }
+  
+    .button-controls {
+      display: flex;
+      justify-content: space-between;
+      
+      .button-controls {
+        width: 100%;
+        position: absolute;
+        top: -20px;
+        display: flex;
+        justify-content: space-between;
+        
+        button { 
+          width: 150px;
+          height: 50px;
+  
+          color: $black !important;
+  
+          .btn-inner--icon {
+            margin-right: 10px;
+          }
+  
+          .btn-inner--text {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

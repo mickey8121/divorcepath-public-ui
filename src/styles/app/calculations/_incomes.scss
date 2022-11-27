@@ -1,0 +1,11 @@
+.income {
+  .select-row {
+    @include media-breakpoint-down(xs) {
+      justify-content: flex-end;
+    }
+  }
+
+  .text-danger {
+    font-weight: normal;
+  }
+}

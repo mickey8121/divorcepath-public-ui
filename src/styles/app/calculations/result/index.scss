@@ -1,0 +1,23 @@
+@import './details-table';
+
+.nav.nav-tabs {
+  margin-bottom: 20px;
+  margin-top: 30px;
+
+  .nav-link {
+    background-color: #eff2f7;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    border-bottom-color: #d6ddea;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+
+    &.active {
+      color: #212529;
+      background-color: #d6ddea;
+      border-color: #dee2e6 #dee2e6 #d6ddea;
+    }
+  }
+}

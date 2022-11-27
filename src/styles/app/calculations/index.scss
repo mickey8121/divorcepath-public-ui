@@ -1,0 +1,202 @@
+@import 'calculations';
+@import 'sections';
+@import 'sidebar';
+@import 'children';
+@import 'incomes';
+@import 'tax';
+@import 'background';
+@import 'support-report';
+@import 'result';
+
+@import 'calculate-buttons';
+
+.calculator-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > .custom-button {
+    margin-top: 15px;
+  }
+
+  & > .toggle-checkbox {
+    align-self: flex-start;
+    margin-bottom: 25px;
+  }
+
+  &.filled {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  
+    @include media-breakpoint-down(xs) {
+      padding: 0 5px !important;
+      padding-right: 2px !important;
+    }
+    
+    .calculator-section-container {
+      margin-top:0;
+      border-radius: 0;
+  
+      .section-header {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+.select-row {
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  & > div:first-of-type {
+    max-width: 220px;
+  }
+}
+
+.angle-btn {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  left: 10px;
+  top: 12px;
+  cursor: pointer;
+
+  @include media-breakpoint-down(xs) {
+    min-width: 48px;
+  }
+
+  i {
+    position: absolute;
+    left: calc(24px - 5px);
+    top: calc(24px - 8px);
+  }
+}
+
+.calculation-select-mobile {
+  .calculation-select__option:not(.calculation-select__option--is-disabled) {
+    cursor: pointer;
+  }
+
+  .upgrade {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      width: 16px;
+      height: 16px;
+      background: url(/canada/images/icons/upgrade.svg) no-repeat center;
+      transform: translateY(-50%);
+    }
+
+    .calculation-select__option {
+      padding: 8px 36px 8px 12px;
+    }
+  }
+}
+
+.calculation-select {
+  width: 100%;
+  display: none !important;
+
+  @include media-breakpoint-up(sm) {
+    display: block !important;
+  }
+
+  .calculation-select__option:not(.calculation-select__option--is-disabled) {
+    cursor: pointer;
+  }
+
+  .upgrade {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      width: 16px;
+      height: 16px;
+      background: url(/canada/images/icons/upgrade.svg) no-repeat center;
+      transform: translateY(-50%);
+    }
+
+    .calculation-select__option {
+      padding: 8px 36px 8px 12px;
+    }
+  }
+}
+
+.result-section {
+  background-color: white;
+  padding: 20px;
+  @include media-breakpoint-down(xs) {
+    padding: 20px 10px;
+  }
+}
+
+.row-collapse-content {
+  padding: 1rem;
+  @include media-breakpoint-down(xs) {
+    padding:0.25rem;
+  }
+}
+
+.tax-results-row {
+  margin-left:10px;
+  @include media-breakpoint-down(xs) {
+    max-width: 100%;
+    margin-left:0px;
+  }
+  thead th:first-of-type {
+    padding-left:2px;
+  }
+  th {padding-left:2px;}
+  table, th, tr, td {
+    padding: 2px;
+    border-top: none;
+    text-align:left;
+  }
+  th:first-of-type {
+    @include media-breakpoint-down(xs) {
+      max-width: 120px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  td {
+    @include media-breakpoint-down(xs) {
+      max-width: 80px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .tax-section {
+    font-weight: bold;
+    padding-left: 2px !important;
+  }
+  .tax-row {
+    font-weight: normal;
+    padding-left: 12px !important;
+    @include media-breakpoint-down(xs) {
+      padding-left: 5px;
+    }
+  }
+  .tax-total {
+    font-weight: bold;
+    padding-left: 2px !important;
+  }
+  .tax-subtotal {
+    font-style: italic;
+    font-weight: normal;
+    padding-left: 12px !important;
+    @include media-breakpoint-down(xs) {
+      padding-left: 5px !important;
+    }
+  }
+}

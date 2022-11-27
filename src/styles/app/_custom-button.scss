@@ -1,0 +1,108 @@
+.btn.custom-button {
+  padding: .75rem 1.75rem;
+  font-weight: 600;
+  appearance: none;
+
+  &.btn-primary {
+    color: $white;
+    background-color: $btn-primary;
+    border-color: $btn-primary;
+    box-shadow: $custom-box-shadow;
+  
+    &:hover:not(:disabled) {
+      background-color: $btn-primary-hover;
+      border-color: $btn-border-hover;
+    }
+  
+    &:active,
+    &:focus {
+      background-color: $btn-primary-hover;
+      border-color: $btn-border-hover;
+      box-shadow: $custom-box-shadow, 0 0 0 0 transparentize($primary, 0.5) !important;
+    }
+  
+    &.active:not(:disabled) {
+      background-color: $btn-primary-active;
+      border-color: $btn-border-active;
+    }
+  
+    &:disabled {
+      opacity: 0.65;
+    }
+  }
+
+  &.btn-transparent {
+    background-color: transparent;
+    border-color: transparent;
+
+    @include hover-focus-active {
+      box-shadow: none !important;
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &:disabled {
+      opacity: 0.65;
+    }
+  }
+
+  &.btn-secondary {
+    color: $gray-900;
+    background-color: $secondary;
+    border-color: $secondary;
+    box-shadow: $custom-box-shadow;
+
+    &:hover:not(:disabled) {
+      color: $gray-900;
+      background-color: #d6ddea;
+      border-color: $btn-secondary-focus;
+    }
+
+    &:active,
+    &:focus,
+    &.active:disabled {
+      color: $gray-900;
+      background-color: $btn-secondary-focus !important;
+      border-color: $btn-secondary-border-color !important;
+      box-shadow: $custom-box-shadow !important;
+    }
+  }
+
+  &.btn-md {
+    padding: .5rem 1.25rem;
+  }
+
+  &.btn-sm {
+    padding: 0.25rem 0.5rem;
+  }
+
+  &.active {
+    z-index: 0;
+  }
+
+  &.small {
+    font-size: 80%;
+    font-weight: 400;
+  }
+}
+
+button.btn.custom-button.invalid-feedback-btn {
+  width: unset;
+  box-shadow: 0px 0px 5px 2px #ff3b30
+}
+
+button.btn-sm-loading {
+  >div {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+  }
+}
+
+div.close-btn {
+  padding: 0rem 1rem 1rem 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

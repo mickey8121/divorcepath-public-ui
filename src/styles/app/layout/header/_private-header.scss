@@ -1,0 +1,139 @@
+.client-header {
+  .client-buttons {
+    width: 100%;
+    margin-left: 0;
+    border: 0;
+    margin-bottom: -25px;
+
+    .client-button-group {
+      span {
+        color: $gray-900 !important;
+
+        &.btn-inner--text {
+          margin-left: 15px;
+        }
+      }
+    }
+
+    .btn {
+      padding: .75rem 1.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: 600;
+
+      &.btn-secondary {
+        border-color: $secondary;
+
+        &:hover {
+          border-bottom-color: #b0b7c4;
+        }
+      }
+
+      @include hover-focus-active {
+        color: $gray-900;
+        background-color: $btn-secondary-focus;
+        border-color: $btn-secondary-border-color;
+        box-shadow: none !important;
+      }
+
+      &:focus {
+        background-color: $white;
+      }
+
+      &:hover {
+        background-color: $btn-secondary-focus;
+      }
+    }
+
+    .pro-dropdown {
+      .calculations-type-dropdown {
+        .dropdown-toggle {
+          border-radius: .25rem 0 0 .25rem;
+          padding: .75rem 1.75rem;
+
+          .btn-inner--text {
+            margin-left: 15px !important;
+          }
+        }
+
+        .dropdown-menu {
+          .dropdown-item {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+
+    .calculations-type-dropdown {
+      .dropdown-menu.dropdown-item {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  .user-info {
+    @include media-breakpoint-down(xs) {
+      flex-wrap: nowrap;
+    }
+
+    @media (max-width: 500px) {
+      span.h2 {
+        font-size: 1.6rem;
+      }
+
+      span.h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .clients-count {
+    margin-bottom: 0;
+    flex: 1 1 auto !important;
+    text-align: right;
+
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+    }
+    
+    .badge {
+      padding: 0;
+    }
+  }
+
+  .profile-progress {
+    margin-bottom: 0;
+    flex: 1 1 auto !important;
+    text-align: right;
+
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+    }
+
+    @include media-breakpoint-up(md) {
+      text-align: right;
+    }
+
+    .badge {
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .header-title-description {
+    display: block;
+  }
+}
+
+.sm-link {
+  a {
+    color: $white;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

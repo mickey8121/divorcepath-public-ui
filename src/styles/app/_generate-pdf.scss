@@ -1,0 +1,67 @@
+.generate-pdf {
+  & > div > .row > div > .btn.custom-button {
+    padding: .77rem 1.30rem;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 15px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+
+  &.small {
+    margin-top: 20px !important;
+
+    & > div > div > div > .btn.custom-button {
+      padding: 8px 1.25rem !important;
+      font-weight: 400;
+      font-size: 12.8px;
+
+      @include media-breakpoint-only(md) {
+        margin-top: initial;
+      }
+
+      span.small {
+        font-size: 100%;
+      }
+    }
+
+    .custom-select-input {
+      @include media-breakpoint-between(md, lg) {
+        width: 200px;
+      }
+    }
+  }
+
+  .custom-select-input {
+    @include media-breakpoint-between(sm, md) {
+      width: 200px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
+  }
+
+  .report-type-img  {
+    float: left;
+    margin-right: 1rem;
+    margin-left: -3px;
+    max-width: 200px;
+    max-height: 238px;
+
+    @include media-breakpoint-down(xs) {
+      float: initial;
+      width: 100%;
+      height: auto;
+      max-width: initial;
+      max-height: initial;
+    }
+  }
+
+  & > div > .col-12.mt-3 {
+    padding: 0;
+  }
+}

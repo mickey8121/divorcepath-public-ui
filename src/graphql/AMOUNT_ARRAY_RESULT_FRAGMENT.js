@@ -1,0 +1,11 @@
+import AMOUNT_RESULT_FRAGMENT from 'graphql/AMOUNT_RESULT_FRAGMENT';
+
+const AMOUNT_ARRAY_RESULT_FRAGMENT = [
+  'id',
+  'total',
+  {
+    all: AMOUNT_RESULT_FRAGMENT
+  }
+];
+
+export default AMOUNT_ARRAY_RESULT_FRAGMENT;

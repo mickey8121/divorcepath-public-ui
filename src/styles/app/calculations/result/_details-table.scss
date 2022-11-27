@@ -1,0 +1,32 @@
+.details-table-row {
+    border-top: 1px solid #eff2f7;
+
+    .row {
+        &.expanded {
+            background-color: #fafafa;
+        }
+        >:nth-child(n) {
+            padding: 0 2.5px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        >:not(:last-child()) {
+            padding-top: 12px;
+        }
+
+        >:first-child {
+            font-weight: 700;
+        }
+
+        .title {
+            background-color: #fff;
+            font-weight: normal;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-left:4px;
+            font-style: italic;
+        }
+    }
+}

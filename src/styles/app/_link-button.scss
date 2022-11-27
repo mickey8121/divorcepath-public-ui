@@ -1,0 +1,10 @@
+.link-btn {
+  display: inline-block;
+  text-decoration: underline;
+  cursor: pointer;
+  color: $gray-700;
+
+  &:hover { 
+    text-decoration-color: $hover-border
+  }
+}

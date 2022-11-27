@@ -1,0 +1,79 @@
+@import 'variables';
+@import 'common';
+@import 'layout';
+@import 'link-button';
+@import 'calculations';
+
+@import 'custom-button';
+@import 'custom-input';
+@import 'custom-date-picker';
+@import 'custom-btn-group';
+@import 'custom-select';
+@import 'custom-switch';
+@import 'avatar-selector';
+@import 'breadcrumb';
+@import 'loading';
+@import 'generate-pdf';
+@import 'progress';
+@import 'calculations-type-dropdown';
+@import 'alert';
+@import 'modal';
+@import 'toggle-checkbox';
+@import 'preloader';
+@import 'slider';
+
+html {
+  @media screen {
+    background-color: $secondary;
+  }
+
+  height: 100%;
+
+  body {
+    background-color: unset;
+    height: 100%;
+
+    #react-root {
+      height: 100%;
+    }
+  }
+
+  main {
+    padding-bottom: 60px;
+  }
+
+  .navbar-nav .nav-link img {
+    width: auto;
+    height: 14px;
+    margin-right: 0.5rem;
+    position: relative;
+    top: -1px;
+  }
+
+  .text-sm {
+    font-size: 0.875rem !important;
+  }
+
+  .card {
+    margin-bottom: 30px;
+  }
+
+  .text-limit {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .btn-icon-only {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0;
+  }
+
+  .form-control-label {
+    color: #343a40;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+}

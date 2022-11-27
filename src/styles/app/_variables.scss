@@ -1,0 +1,29 @@
+$max-width-content: 1140px;
+
+$primary: #6e00ff;
+$secondary: #eff2f7;
+
+$neutral-200: #D6D6D6;
+$neutral-300: #878787;
+
+$border-color: $secondary;
+$border-focus-color: transparentize($primary, 0.6);
+$hover-border: darken($border-color, 30%);
+
+$btn-primary: $primary;
+$btn-primary-hover: #5e00d9;
+$btn-primary-active: #5800cc;
+$btn-border-hover: $btn-primary-active;
+$btn-border-active: #5300bf;
+
+$btn-secondary-focus: #cdd6e6;
+$btn-secondary-border-color: #c5cfe2;
+
+$custom-box-shadow: inset 0 1px 0 transparentize($white, 0.85);
+
+$error: #ff3b30;
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+);

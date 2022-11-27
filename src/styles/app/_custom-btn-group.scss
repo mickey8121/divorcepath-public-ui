@@ -1,0 +1,32 @@
+.custom-btn-group {
+  display: block;
+
+  .btn {
+    display: inline-block !important;
+
+    &.btn-lg {
+      font-size: 1rem;
+    }
+
+    &.btn-secondary.active:not(:disabled) {
+        color: $gray-900;
+        background-color: $btn-secondary-focus !important;
+        border-color: $btn-secondary-border-color !important;
+        box-shadow: $custom-box-shadow !important;
+    }
+  }
+
+  & + .invalid-feedback {
+    display: block;
+    width: 100%;
+    font-size: 80%;
+    color: $error;
+    transition: margin-top 0.1s ease-in-out,
+                opacity 0.1s ease-in-out;
+    margin-top: 0px;
+
+    &.show {
+      margin-top: 0.25rem;
+    }
+  }
+}

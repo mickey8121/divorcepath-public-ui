@@ -1,0 +1,192 @@
+$shadow-colors: (
+  primary: $blue,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  dark: $dark
+);
+
+@mixin shadow($selector) {
+  box-shadow: 0px 0px 8px 2px #{$selector};
+}
+
+@mixin hover-shadow($selector) {
+  &:hover {
+    @include shadow($selector);
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.link {
+  cursor: pointer;
+}
+
+.undeline-hover {
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+.sidebar-container {
+  padding-top: 1.5rem !important;
+  position: sticky;
+  top: 0;
+}
+
+.custom-timeline {
+  position: relative;
+
+  @include media-breakpoint-down(xs) {
+    margin-left: -5px;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin: 2em 0;
+
+    a:not(.link-to-profile) {
+      color: #212529;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    // &:hover {
+    //   text-decoration: underline;
+    // }
+
+    .timeline-step {
+      position: absolute;
+      left: 1rem;
+    }
+
+    .custom-timeline-step {
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      font-size: 0.75rem;
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      left: 1rem;
+      border-radius: 50%;
+      background: $white;
+      border: 2px solid #dee2e6;
+      text-align: center;
+      transform: translateX(-50%);
+      font-weight: 700;
+      z-index: 1;
+      transition: box-shadow 0.2s ease-in-out;
+
+      @each $shadow, $color in $shadow-colors {
+        &-shadow-#{$shadow} {
+          @include shadow($color);
+        }
+      }
+    }
+
+    .timeline-item-content {
+      max-width: 90%;
+      margin-left: 60px;
+      position: relative;
+      cursor: pointer;
+      top: -6px;
+
+      @include media-breakpoint-down(sm) {
+        height: 25px;
+
+        div,
+        h6,
+        a,
+        small {
+          display: none;
+        }
+      }
+
+      .truncated {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+
+        small,
+        span {
+          white-space: nowrap;
+        }
+      }
+
+      .calculation-block {
+        margin-left: 10px;
+
+        span {
+          white-space: nowrap;
+        }
+
+        &.results-row {
+          display: flex;
+          flex-wrap: nowrap;
+
+          & > span:nth-child(even) {
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .link-to-profile {
+        margin-left: 5px;
+
+        &::before {
+          content: '(';
+          color: #6c7686;
+        }
+        &::after {
+          content: ')';
+          color: #6c7686;
+        }
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-right: 2px dashed #8492a6;
+    padding-left: 15px;
+  }
+}
+
+.calculator-sidebar {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  margin-top: 50px;
+  padding-bottom: 74px;
+
+  @media only screen and (max-width: 766px) {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+
+    .timeline:before {
+      height: 95% !important;
+      border-right: 2px solid #8492a6;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+  }
+
+  .text-muted {
+    color: #6c7686 !important;
+  }
+}

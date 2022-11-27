@@ -1,0 +1,19 @@
+.children {
+  .angle-button {
+    position: relative;
+    width: 48px;
+    height: 48px;
+
+    i {
+      position: absolute;
+      left: calc(24px - 5px);
+      top: calc(24px - 8px);
+    }
+  }
+
+  .custom-btn-group .btn{
+    @include media-breakpoint-down(xs) {
+      padding: .5rem 1.25rem;
+    }
+  }
+}

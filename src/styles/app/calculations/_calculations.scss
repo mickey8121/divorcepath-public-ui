@@ -1,0 +1,219 @@
+.calculations-list {
+  .card-header {
+    background-color: $white;
+    padding-left: 0.5rem !important;
+    padding-bottom: 0.75rem !important; 
+  }
+
+  .list-group-item {
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    .calculation-link {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
+      overflow: hidden;
+      padding-right: 5px;
+    }
+  }
+
+  .generate-pdf {
+    .report-type-img {
+      display: none !important;
+    }
+
+    & > div > .row.no-gutters {
+      margin-top: initial;
+    }
+
+    & > div > .row > div > .btn.custom-button {
+      padding: .45rem 1.30rem;
+      height: 38px;
+      margin-top: initial;
+      font-size: 12.8px;
+
+      span {
+        font-size: 100%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.calculation-title-row {
+  display: flex;
+
+  &.three-btn {
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
+
+    .input-title-container {
+      @include media-breakpoint-down(sm) {
+        margin-right: 0;
+        display: flex;
+      }
+
+      .form-group {
+        @include media-breakpoint-down(sm) {
+          margin-right: 0.5rem;
+          width: 100%;
+          margin-bottom: 0 !important;
+        }
+      }
+
+      .save-button-container {
+        display: none;
+
+        @include media-breakpoint-down(sm) {
+          display: block;
+
+          button {
+            margin-bottom: 0.5rem !important;
+          }
+        }
+      }
+    }
+
+    .buttons {
+      .save-button-container {
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+
+        & > div, & > button {
+          width: 50%;
+  
+          & > button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &.two-btn {
+    .input-title-container {
+      .save-button-container {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+
+      .input-title-container {
+        margin-right: 0;
+
+        .save-button-container {
+          display: none;
+        }
+      }
+
+      .buttons {
+        width: 100%;
+
+        & > div, & > button {
+          width: 50%;
+  
+          & > button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &.one-btn {
+    .input-title-container {
+      .save-button-container {
+        display: none;
+      }
+    }
+  }
+
+  .input-title-container {
+    width: 100%;
+    margin-right: 0.5rem;
+
+    .form-group.custom-input .form-control {
+      padding: .75rem 0.65rem;
+    }
+  }
+
+  .buttons {
+    display: flex;
+
+    .save-button-container {
+      margin-right: 0.5rem;
+    }
+
+    .btn {
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .d-md-inline:nth-child(2) {
+      @include media-breakpoint-up(lg) {
+        display: none !important;
+      }
+    }
+
+    .calculations-type-dropdown {
+      .dropdown-toggle {
+        padding: .75rem 1.4rem;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.calculation-info {
+  display: block;
+  margin-top: 1.5rem;
+  // margin-bottom: -20px;
+  font-size: 80%;
+  font-weight: 400;
+
+  .info-item {
+    span:first-child {
+      font-weight: 500;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+}
+
+.support-report-preloader-container {
+  // width: 50%;
+  
+  .container {
+    // padding: 0 0 150px 0;
+
+    .row {  
+      .progress {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.previous-calc-list {
+  .list-group-item {
+    .custom-button.btn.btn-md {
+      padding: 6px 1.25rem;
+    }
+  }
+}

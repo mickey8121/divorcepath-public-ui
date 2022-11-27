@@ -1,0 +1,10 @@
+.background {
+  .select-row > div:first-of-type {
+    width: 80%;
+    max-width: 220px;
+
+    @include media-breakpoint-up (md) {
+      width: 100%;
+    }
+  }
+}

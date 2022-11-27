@@ -1,0 +1,32 @@
+.select-input {
+  margin-bottom: 0;
+
+  .custom-select-input {
+    & > div:first-of-type > div:last-of-type {
+      max-width: 37px;
+    }
+
+    & > div:first-of-type {
+      border-color: $gray-400;
+      color: $gray-400;
+      background-color: $white;
+    }
+
+    &.disabled > div:first-of-type {
+      background-color: #f2f2f2;
+    }
+  
+    &:focus {
+      & > div:first-of-type {
+        border-color: $border-focus-color;
+        box-shadow: inset 0 1px 1px rgba(31,45,61,.075), 0 0 20px rgba(110,0,255,.1)
+      }
+    }
+  
+    &.is-invalid {
+      & > div:first-of-type {
+        border-color: $error !important;
+      }
+    }
+  }
+}

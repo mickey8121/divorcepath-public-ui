@@ -1,0 +1,33 @@
+.modal-dialog.alert-confirm {
+  .modal-content {
+    border-radius: 1rem;
+    border: none;
+
+    .modal-header {
+      .modal-title {
+        line-height: 24px;
+      }
+    }
+
+    .modal-body {
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: space-between;
+      border-top: none;
+
+      &.bordered {
+        border-top: 1px solid #dee2e6;
+      }
+
+      .btn-cancel {
+        padding: 0;
+        text-decoration: none;
+      }
+    }
+  }
+}
